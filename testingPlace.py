@@ -5,7 +5,7 @@ from Phidget22.LogLevel import *
 from Phidget22.Devices.RCServo import *
 import traceback
 import time
-import random
+
 #Declare any event handlers here. These will be called every time the associated event occurs.
 
 def onRCServo0_Attach(self):
@@ -19,15 +19,11 @@ def onRCServo0_Error(self, code, description):
 	print("Description: " + str(description))
 	print("----------")
 
-def spin():
-	return random.randint(0, 180)
-		
 def main():
 	try:
 		Log.enable(LogLevel.PHIDGET_LOG_INFO, "phidgetlog.log")
 		#Create your Phidget channels
 		rcServo0 = RCServo()
-		
 
 		#Set addressing parameters to specify which channel to open (if any)
 		rcServo0.setDeviceSerialNumber(302849)
@@ -41,10 +37,11 @@ def main():
 		rcServo0.openWaitForAttachment(5000)
 
 		#Do stuff with your Phidgets here or in your event handlers.
-		rcServo0.setTargetPosition(spin())
+		rcServo0.setTargetPosition(90)
 		rcServo0.setEngaged(True)
-
-		time.sleep(5)
+		time.sleep(1)
+		rcServo0.setTargetPosition(0)
+		time.sleep(1)
 
 		#Close your Phidgets once the program is done.
 		rcServo0.close()
@@ -56,3 +53,4 @@ def main():
 		print("PhidgetException " + str(ex.code) + " (" + ex.description + "): " + ex.details)
 
 
+main()
