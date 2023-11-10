@@ -120,3 +120,120 @@
 2023-11-10T10:17:22.749  <Info> phidget22[PhidgetUSBReadThreadFunction()] : 1061 (PhidgetAdvancedServo 8-Motor) v304 S/N:302849: USB read thread started: 0x00000e68
 2023-11-10T10:17:27.800  <Info> phidget22[PhidgetUSBReadThreadFunction()] : 1061 (PhidgetAdvancedServo 8-Motor) v304 S/N:302849: ReadThread exiting normally (signaled by Phidget_close)
 2023-11-10T10:17:27.800  <Info> phidget22usb[PhidgetUSBCloseHandle()] : Closing USB Device: 0x160
+2023-11-10T10:19:09.480  <Info> phidget22 : 
+	******************************  Logging Enabled  ******************************
+	* Phidget22 - Version 1.17 - Built Oct  4 2023 12:00:00                       *
+	* Release 1.17.20231004 - Windows (64-bit)                                    *
+	*******************************************************************************
+2023-11-10T10:19:09.496  <Info> phidget22usb[AttachUSBDevice()] : Attaching HID Phidget | Path: \\?\hid#vid_06c2&pid_0045#7&2cccb3f2&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030} | PDO Name: \Device\000000c4
+2023-11-10T10:19:09.498  <Info> phidget22[deviceAttach()] : (Attach) 1013/1018/1019 (PhidgetInterfaceKit 8/8/8) v826 S/N:107414
+2023-11-10T10:19:09.498  <Info> phidget22usb[AttachUSBDevice()] : Attaching HID Phidget | Path: \\?\hid#vid_06c2&pid_003a#7&382368d6&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030} | PDO Name: \Device\000000c5
+2023-11-10T10:19:09.498  <Info> phidget22[deviceAttach()] : (Attach) 1061 (PhidgetAdvancedServo 8-Motor) v304 S/N:302849
+2023-11-10T10:19:09.498  <Info> phidget22usb[PhidgetUSBOpenHandle()] : Opened USB Device: 0x20c
+2023-11-10T10:19:09.498  <Info> phidget22[PhidgetUSBReadThreadFunction()] : 1061 (PhidgetAdvancedServo 8-Motor) v304 S/N:302849: USB read thread started: 0x00002f00
+2023-11-10T10:19:13.429  <Info> phidget22 : 
+	******************************  Logging Enabled  ******************************
+	* Phidget22 - Version 1.17 - Built Oct  4 2023 12:00:00                       *
+	* Release 1.17.20231004 - Windows (64-bit)                                    *
+	*******************************************************************************
+2023-11-10T10:19:13.433  <Info> phidget22usb[AttachUSBDevice()] : Attaching HID Phidget | Path: \\?\hid#vid_06c2&pid_0045#7&2cccb3f2&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030} | PDO Name: \Device\000000c4
+2023-11-10T10:19:13.435  <Info> phidget22[deviceAttach()] : (Attach) 1013/1018/1019 (PhidgetInterfaceKit 8/8/8) v826 S/N:107414
+2023-11-10T10:19:13.435  <Info> phidget22usb[AttachUSBDevice()] : Attaching HID Phidget | Path: \\?\hid#vid_06c2&pid_003a#7&382368d6&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030} | PDO Name: \Device\000000c5
+2023-11-10T10:19:13.435  <Info> phidget22[deviceAttach()] : (Attach) 1061 (PhidgetAdvancedServo 8-Motor) v304 S/N:302849
+2023-11-10T10:19:13.435  <Info> phidget22usb[PhidgetUSBOpenHandle()] : Opened USB Device: 0x2a4
+2023-11-10T10:19:13.435  <Info> phidget22[PhidgetUSBReadThreadFunction()] : 1061 (PhidgetAdvancedServo 8-Motor) v304 S/N:302849: USB read thread started: 0x00002148
+2023-11-10T10:19:18.487  <Info> phidget22[PhidgetUSBReadThreadFunction()] : 1061 (PhidgetAdvancedServo 8-Motor) v304 S/N:302849: ReadThread exiting normally (signaled by Phidget_close)
+2023-11-10T10:19:18.487  <Info> phidget22usb[PhidgetUSBCloseHandle()] : Closing USB Device: 0x2a4
+2023-11-10T10:19:19.913  <Info> phidget22 : 
+	******************************  Logging Enabled  ******************************
+	* Phidget22 - Version 1.17 - Built Oct  4 2023 12:00:00                       *
+	* Release 1.17.20231004 - Windows (64-bit)                                    *
+	*******************************************************************************
+2023-11-10T10:19:19.913  <Info> phidget22usb[AttachUSBDevice()] : Attaching HID Phidget | Path: \\?\hid#vid_06c2&pid_0045#7&2cccb3f2&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030} | PDO Name: \Device\000000c4
+2023-11-10T10:19:19.928  <Info> phidget22[deviceAttach()] : (Attach) 1013/1018/1019 (PhidgetInterfaceKit 8/8/8) v826 S/N:107414
+2023-11-10T10:19:19.929  <Info> phidget22usb[AttachUSBDevice()] : Attaching HID Phidget | Path: \\?\hid#vid_06c2&pid_003a#7&382368d6&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030} | PDO Name: \Device\000000c5
+2023-11-10T10:19:19.930  <Info> phidget22[deviceAttach()] : (Attach) 1061 (PhidgetAdvancedServo 8-Motor) v304 S/N:302849
+2023-11-10T10:19:19.932  <Info> phidget22usb[PhidgetUSBOpenHandle()] : Opened USB Device: 0x150
+2023-11-10T10:19:19.932  <Info> phidget22[PhidgetUSBReadThreadFunction()] : 1061 (PhidgetAdvancedServo 8-Motor) v304 S/N:302849: USB read thread started: 0x00001228
+2023-11-10T10:19:20.983  <Info> phidget22usb[PhidgetUSBCloseHandle()] : Closing USB Device: 0x150
+2023-11-10T10:19:20.983  <Info> phidget22[PhidgetUSBReadThreadFunction()] : 1061 (PhidgetAdvancedServo 8-Motor) v304 S/N:302849: ReadThread exiting normally (signaled by Phidget_close)
+2023-11-10T10:19:23.112  <Info> phidget22 : 
+	******************************  Logging Enabled  ******************************
+	* Phidget22 - Version 1.17 - Built Oct  4 2023 12:00:00                       *
+	* Release 1.17.20231004 - Windows (64-bit)                                    *
+	*******************************************************************************
+2023-11-10T10:19:23.112  <Info> phidget22usb[AttachUSBDevice()] : Attaching HID Phidget | Path: \\?\hid#vid_06c2&pid_0045#7&2cccb3f2&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030} | PDO Name: \Device\000000c4
+2023-11-10T10:19:23.127  <Info> phidget22[deviceAttach()] : (Attach) 1013/1018/1019 (PhidgetInterfaceKit 8/8/8) v826 S/N:107414
+2023-11-10T10:19:23.127  <Info> phidget22usb[AttachUSBDevice()] : Attaching HID Phidget | Path: \\?\hid#vid_06c2&pid_003a#7&382368d6&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030} | PDO Name: \Device\000000c5
+2023-11-10T10:19:23.129  <Info> phidget22[deviceAttach()] : (Attach) 1061 (PhidgetAdvancedServo 8-Motor) v304 S/N:302849
+2023-11-10T10:19:23.129  <Info> phidget22usb[PhidgetUSBOpenHandle()] : Opened USB Device: 0x260
+2023-11-10T10:19:23.129  <Info> phidget22[PhidgetUSBReadThreadFunction()] : 1061 (PhidgetAdvancedServo 8-Motor) v304 S/N:302849: USB read thread started: 0x00001ad4
+2023-11-10T10:19:24.184  <Info> phidget22usb[PhidgetUSBCloseHandle()] : Closing USB Device: 0x260
+2023-11-10T10:19:24.184  <Info> phidget22[PhidgetUSBReadThreadFunction()] : 1061 (PhidgetAdvancedServo 8-Motor) v304 S/N:302849: ReadThread exiting normally (signaled by Phidget_close)
+2023-11-10T10:19:32.664  <Info> phidget22 : 
+	******************************  Logging Enabled  ******************************
+	* Phidget22 - Version 1.17 - Built Oct  4 2023 12:00:00                       *
+	* Release 1.17.20231004 - Windows (64-bit)                                    *
+	*******************************************************************************
+2023-11-10T10:19:32.664  <Info> phidget22usb[AttachUSBDevice()] : Attaching HID Phidget | Path: \\?\hid#vid_06c2&pid_0045#7&2cccb3f2&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030} | PDO Name: \Device\000000c4
+2023-11-10T10:19:32.664  <Info> phidget22[deviceAttach()] : (Attach) 1013/1018/1019 (PhidgetInterfaceKit 8/8/8) v826 S/N:107414
+2023-11-10T10:19:32.664  <Info> phidget22usb[AttachUSBDevice()] : Attaching HID Phidget | Path: \\?\hid#vid_06c2&pid_003a#7&382368d6&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030} | PDO Name: \Device\000000c5
+2023-11-10T10:19:32.664  <Info> phidget22[deviceAttach()] : (Attach) 1061 (PhidgetAdvancedServo 8-Motor) v304 S/N:302849
+2023-11-10T10:19:32.678  <Info> phidget22usb[PhidgetUSBOpenHandle()] : Opened USB Device: 0x260
+2023-11-10T10:19:32.678  <Info> phidget22[PhidgetUSBReadThreadFunction()] : 1061 (PhidgetAdvancedServo 8-Motor) v304 S/N:302849: USB read thread started: 0x0000062c
+2023-11-10T10:19:33.720  <Info> phidget22[PhidgetUSBReadThreadFunction()] : 1061 (PhidgetAdvancedServo 8-Motor) v304 S/N:302849: ReadThread exiting normally (signaled by Phidget_close)
+2023-11-10T10:19:33.720  <Info> phidget22usb[PhidgetUSBCloseHandle()] : Closing USB Device: 0x260
+2023-11-10T10:19:34.982  <Info> phidget22 : 
+	******************************  Logging Enabled  ******************************
+	* Phidget22 - Version 1.17 - Built Oct  4 2023 12:00:00                       *
+	* Release 1.17.20231004 - Windows (64-bit)                                    *
+	*******************************************************************************
+2023-11-10T10:19:34.984  <Info> phidget22usb[AttachUSBDevice()] : Attaching HID Phidget | Path: \\?\hid#vid_06c2&pid_0045#7&2cccb3f2&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030} | PDO Name: \Device\000000c4
+2023-11-10T10:19:34.986  <Info> phidget22[deviceAttach()] : (Attach) 1013/1018/1019 (PhidgetInterfaceKit 8/8/8) v826 S/N:107414
+2023-11-10T10:19:34.986  <Info> phidget22usb[AttachUSBDevice()] : Attaching HID Phidget | Path: \\?\hid#vid_06c2&pid_003a#7&382368d6&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030} | PDO Name: \Device\000000c5
+2023-11-10T10:19:34.986  <Info> phidget22[deviceAttach()] : (Attach) 1061 (PhidgetAdvancedServo 8-Motor) v304 S/N:302849
+2023-11-10T10:19:34.986  <Info> phidget22usb[PhidgetUSBOpenHandle()] : Opened USB Device: 0x264
+2023-11-10T10:19:34.986  <Info> phidget22[PhidgetUSBReadThreadFunction()] : 1061 (PhidgetAdvancedServo 8-Motor) v304 S/N:302849: USB read thread started: 0x00000a94
+2023-11-10T10:19:36.020  <Info> phidget22[PhidgetUSBReadThreadFunction()] : 1061 (PhidgetAdvancedServo 8-Motor) v304 S/N:302849: ReadThread exiting normally (signaled by Phidget_close)
+2023-11-10T10:19:36.020  <Info> phidget22usb[PhidgetUSBCloseHandle()] : Closing USB Device: 0x264
+2023-11-10T10:19:36.775  <Info> phidget22 : 
+	******************************  Logging Enabled  ******************************
+	* Phidget22 - Version 1.17 - Built Oct  4 2023 12:00:00                       *
+	* Release 1.17.20231004 - Windows (64-bit)                                    *
+	*******************************************************************************
+2023-11-10T10:19:36.775  <Info> phidget22usb[AttachUSBDevice()] : Attaching HID Phidget | Path: \\?\hid#vid_06c2&pid_0045#7&2cccb3f2&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030} | PDO Name: \Device\000000c4
+2023-11-10T10:19:36.791  <Info> phidget22[deviceAttach()] : (Attach) 1013/1018/1019 (PhidgetInterfaceKit 8/8/8) v826 S/N:107414
+2023-11-10T10:19:36.791  <Info> phidget22usb[AttachUSBDevice()] : Attaching HID Phidget | Path: \\?\hid#vid_06c2&pid_003a#7&382368d6&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030} | PDO Name: \Device\000000c5
+2023-11-10T10:19:36.791  <Info> phidget22[deviceAttach()] : (Attach) 1061 (PhidgetAdvancedServo 8-Motor) v304 S/N:302849
+2023-11-10T10:19:36.791  <Info> phidget22usb[PhidgetUSBOpenHandle()] : Opened USB Device: 0x260
+2023-11-10T10:19:36.791  <Info> phidget22[PhidgetUSBReadThreadFunction()] : 1061 (PhidgetAdvancedServo 8-Motor) v304 S/N:302849: USB read thread started: 0x00002998
+2023-11-10T10:19:37.849  <Info> phidget22[PhidgetUSBReadThreadFunction()] : 1061 (PhidgetAdvancedServo 8-Motor) v304 S/N:302849: ReadThread exiting normally (signaled by Phidget_close)
+2023-11-10T10:19:37.849  <Info> phidget22usb[PhidgetUSBCloseHandle()] : Closing USB Device: 0x260
+2023-11-10T10:19:38.727  <Info> phidget22 : 
+	******************************  Logging Enabled  ******************************
+	* Phidget22 - Version 1.17 - Built Oct  4 2023 12:00:00                       *
+	* Release 1.17.20231004 - Windows (64-bit)                                    *
+	*******************************************************************************
+2023-11-10T10:19:38.727  <Info> phidget22usb[AttachUSBDevice()] : Attaching HID Phidget | Path: \\?\hid#vid_06c2&pid_0045#7&2cccb3f2&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030} | PDO Name: \Device\000000c4
+2023-11-10T10:19:38.727  <Info> phidget22[deviceAttach()] : (Attach) 1013/1018/1019 (PhidgetInterfaceKit 8/8/8) v826 S/N:107414
+2023-11-10T10:19:38.727  <Info> phidget22usb[AttachUSBDevice()] : Attaching HID Phidget | Path: \\?\hid#vid_06c2&pid_003a#7&382368d6&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030} | PDO Name: \Device\000000c5
+2023-11-10T10:19:38.742  <Info> phidget22[deviceAttach()] : (Attach) 1061 (PhidgetAdvancedServo 8-Motor) v304 S/N:302849
+2023-11-10T10:19:38.742  <Info> phidget22usb[PhidgetUSBOpenHandle()] : Opened USB Device: 0x260
+2023-11-10T10:19:38.742  <Info> phidget22[PhidgetUSBReadThreadFunction()] : 1061 (PhidgetAdvancedServo 8-Motor) v304 S/N:302849: USB read thread started: 0x00005e48
+2023-11-10T10:19:39.799  <Info> phidget22[PhidgetUSBReadThreadFunction()] : 1061 (PhidgetAdvancedServo 8-Motor) v304 S/N:302849: ReadThread exiting normally (signaled by Phidget_close)
+2023-11-10T10:19:39.799  <Info> phidget22usb[PhidgetUSBCloseHandle()] : Closing USB Device: 0x260
+2023-11-10T10:19:51.731  <Info> phidget22 : 
+	******************************  Logging Enabled  ******************************
+	* Phidget22 - Version 1.17 - Built Oct  4 2023 12:00:00                       *
+	* Release 1.17.20231004 - Windows (64-bit)                                    *
+	*******************************************************************************
+2023-11-10T10:19:51.731  <Info> phidget22usb[AttachUSBDevice()] : Attaching HID Phidget | Path: \\?\hid#vid_06c2&pid_0045#7&2cccb3f2&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030} | PDO Name: \Device\000000c4
+2023-11-10T10:19:51.731  <Info> phidget22[deviceAttach()] : (Attach) 1013/1018/1019 (PhidgetInterfaceKit 8/8/8) v826 S/N:107414
+2023-11-10T10:19:51.731  <Info> phidget22usb[AttachUSBDevice()] : Attaching HID Phidget | Path: \\?\hid#vid_06c2&pid_003a#7&382368d6&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030} | PDO Name: \Device\000000c5
+2023-11-10T10:19:51.731  <Info> phidget22[deviceAttach()] : (Attach) 1061 (PhidgetAdvancedServo 8-Motor) v304 S/N:302849
+2023-11-10T10:19:51.731  <Info> phidget22usb[PhidgetUSBOpenHandle()] : Opened USB Device: 0x260
+2023-11-10T10:19:51.731  <Info> phidget22[PhidgetUSBReadThreadFunction()] : 1061 (PhidgetAdvancedServo 8-Motor) v304 S/N:302849: USB read thread started: 0x00003618
+2023-11-10T10:19:52.792  <Info> phidget22usb[PhidgetUSBCloseHandle()] : Closing USB Device: 0x260
+2023-11-10T10:19:52.792  <Info> phidget22[PhidgetUSBReadThreadFunction()] : 1061 (PhidgetAdvancedServo 8-Motor) v304 S/N:302849: ReadThread exiting normally (signaled by Phidget_close)
+2023-11-10T10:19:53.043  <Info> phidget22[deviceDetach()] : (Detach) 1061 (PhidgetAdvancedServo 8-Motor) v304 S/N:302849
+2023-11-10T10:19:53.043  <Info> phidget22[deviceDetach()] : (Detach) 1013/1018/1019 (PhidgetInterfaceKit 8/8/8) v826 S/N:107414
