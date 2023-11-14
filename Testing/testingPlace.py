@@ -4,9 +4,7 @@ from Phidget22.Devices.Log import *
 from Phidget22.LogLevel import *
 from Phidget22.Devices.RCServo import *
 
-from pynput.keyboard import Key, Listener
-from pynput.mouse import Listener
-from pynput import keyboard
+# import sensoryTesting as key 
 
 import traceback
 import time
