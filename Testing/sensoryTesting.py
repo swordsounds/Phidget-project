@@ -1,29 +1,12 @@
-# from pynput.keyboard import Key, Listener
-# from pynput.mouse import Listener
-# from pynput import keyboard
-
-# def on_click(x, y, button, pressed):
-#     if pressed:
-#         print("Mouse clicked.")
-
-# def on_press(key):
-#     print("key is pressed")
-
-
-
-
-# key_listener = keyboard.Listener(on_press=on_press)
-# key_listener.start()
-
-# with Listener(on_click=on_click) as listener:
-#     listener.join()
-
 from pynput import keyboard
+from pynput import mouse
+import testingPlace as servo 
 
 def on_press(key):
     try:
         print('alphanumeric key {0} pressed'.format(
             key.char))
+        servo.onRCServo0()
     except AttributeError:
         print('special key {0} pressed'.format(
             key))
@@ -47,7 +30,6 @@ listener = keyboard.Listener(
     on_release=on_release)
 listener.start()
 
-from pynput import mouse
 
 def on_move(x, y):
     print('Pointer moved to {0}'.format(
@@ -80,18 +62,3 @@ listener = mouse.Listener(
     on_scroll=on_scroll)
 listener.start()
 
-# from pynput import mouse
-
-# class MyException(Exception): pass
-
-# def on_click(x, y, button, pressed):
-#     if button == mouse.Button.left:
-#         raise MyException(button)
-
-# # Collect events until released
-# with mouse.Listener(
-#         on_click=on_click) as listener:
-#     try:
-#         listener.join()
-#     except MyException as e:
-#         print('{0} was clicked'.format(e.args[0]))

@@ -4,7 +4,6 @@ from Phidget22.Devices.Log import *
 from Phidget22.LogLevel import *
 from Phidget22.Devices.RCServo import *
 
-# import sensoryTesting as key 
 
 import traceback
 import time
@@ -22,9 +21,8 @@ def onRCServo0_Error(self, code, description):
 	print("Description: " + str(description))
 	print("----------")
 
-def main():
+def onRCServo0():
 	try:
-		Log.enable(LogLevel.PHIDGET_LOG_INFO, "phidgetlog.log")
 		#Create your Phidget channels
 		rcServo0 = RCServo()
 
@@ -54,6 +52,3 @@ def main():
 		traceback.print_exc()
 		print("")
 		print("PhidgetException " + str(ex.code) + " (" + ex.description + "): " + ex.details)
-
-
-main()
