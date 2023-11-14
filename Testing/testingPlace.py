@@ -1,8 +1,8 @@
-from Phidget-project.Phidget22.PhidgetException import *
-from Phidget-project.Phidget22.Phidget import *
-from Phidget-project.Phidget22.Devices.Log import *
-from Phidget-project.Phidget22.LogLevel import *
-from Phidget-project.Phidget22.Devices.RCServo import *
+from Phidget22.PhidgetException import *
+from Phidget22.Phidget import *
+from Phidget22.Devices.Log import *
+from Phidget22.LogLevel import *
+from Phidget22.Devices.RCServo import *
 
 from pynput.keyboard import Key, Listener
 from pynput.mouse import Listener
