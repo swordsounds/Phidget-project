@@ -6,7 +6,9 @@ def on_press(key):
     try:
         print('alphanumeric key {0} pressed'.format(
             key.char))
+        
         servo.onRCServo0()
+        
     except AttributeError:
         print('special key {0} pressed'.format(
             key))

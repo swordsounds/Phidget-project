@@ -38,10 +38,12 @@ def onRCServo0():
 		rcServo0.openWaitForAttachment(5000)
 
 		#Do stuff with your Phidgets here or in your event handlers.
-		rcServo0.setTargetPosition(90)
 		rcServo0.setEngaged(True)
-		time.sleep(1)
 		rcServo0.setTargetPosition(0)
+		rcServo0.setTargetPosition(90)
+		
+		time.sleep(1)
+		# rcServo0.setTargetPosition(0)
 		time.sleep(1)
 
 		#Close your Phidgets once the program is done.
