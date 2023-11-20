@@ -20,11 +20,26 @@ def onRCServo0_Error(self, code, description):
 	print("Code: " + ErrorEventCode.getName(code))
 	print("Description: " + str(description))
 	print("----------")
+def thingIsOn(x, rcServo0):
+	x += 5
+	rcServo0.setTargetPosition(x)
+	print(x)
+	rcServo0.setEngaged(True)
+	
+	# time.sleep(1)
+def thingIsOn2(x, rcServo1):
+	x += 5
+	rcServo1.setTargetPosition(x)
+	print(x)
+	rcServo1.setEngaged(True)
+		
 
 def onRCServo0():
+	x = 0
 	try:
 		#Create your Phidget channels
 		rcServo0 = RCServo()
+		
 
 		#Set addressing parameters to specify which channel to open (if any)
 		rcServo0.setDeviceSerialNumber(302849)
@@ -38,16 +53,27 @@ def onRCServo0():
 		rcServo0.openWaitForAttachment(5000)
 
 		#Do stuff with your Phidgets here or in your event handlers.
-		rcServo0.setEngaged(True)
-		rcServo0.setTargetPosition(0)
-		rcServo0.setTargetPosition(90)
-		
-		time.sleep(1)
-		# rcServo0.setTargetPosition(0)
-		time.sleep(1)
+		thingIsOn(x, rcServo0)
 
+		rcServo1 = RCServo()
+		rcServo1.setDeviceSerialNumber(302849)
+
+		#Assign any event handlers you need before calling open so that no events are missed.
+	
+		rcServo1.setOnAttachHandler(onRCServo0_Attach)
+		rcServo1.setOnDetachHandler(onRCServo0_Detach)
+		rcServo1.setOnErrorHandler(onRCServo0_Error)
+		rcServo1.setChannel(1)
+		#Open your Phidgets and wait for attachment
+		rcServo1.openWaitForAttachment(5000)
+		
+		thingIsOn2(x, rcServo1)
+		rcServo0.setTargetPosition(0)
+		rcServo1.setTargetPosition(0)
+		time.sleep(1)
 		#Close your Phidgets once the program is done.
 		rcServo0.close()
+		rcServo1.close()
 
 	except PhidgetException as ex:
 		#We will catch Phidget Exceptions here, and print the error informaiton.
