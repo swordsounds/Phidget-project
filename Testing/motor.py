@@ -3,20 +3,19 @@ from Phidget22.Devices.DCMotor import *
 
 dcMotor0 = DCMotor()
 dcMotor1 = DCMotor()
-dcMotor0.setDeviceSerialNumber(100378)
+
 dcMotor0.setChannel(0)
-dcMotor1.setDeviceSerialNumber(100378)
 dcMotor1.setChannel(1)
 
-def main(multiplier):
-	dcMotor0.openWaitForAttachment(5000)
-	dcMotor1.openWaitForAttachment(5000)
+def main(multiplier, a, d):
+	dcMotor0.openWaitForAttachment(900)
+	dcMotor1.openWaitForAttachment(900)
 
 	dcMotor0.setAcceleration(19.4)
 	dcMotor1.setAcceleration(19.4)
 
-	dcMotor0.setTargetVelocity(1 * multiplier)
-	dcMotor1.setTargetVelocity(1 * multiplier)
+	dcMotor0.setTargetVelocity(1 * multiplier * a)
+	dcMotor1.setTargetVelocity(1 * multiplier * d)
 
 def close():
 	dcMotor0.close()

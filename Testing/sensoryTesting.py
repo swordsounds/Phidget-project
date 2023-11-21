@@ -3,17 +3,30 @@ from pynput import mouse
 import testingPlace as servo 
 import motor as motor
 
+
 def on_press(key):
     try:
         # print('{0}'.format(key.char))
         if key.char == 'w':
+            a = d = 1
             multiplier = 1
-            motor.main(multiplier)
+            motor.main(multiplier, a, d)
         elif key.char == 's':
+            a = d = 1
             multiplier = -1
-            motor.main(multiplier)
+            motor.main(multiplier, a ,d)
+        elif key.char == 'a':
+            a = -1
+            d = 1
+            multiplier = -1
+            motor.main(multiplier, a ,d)
+        elif key.char == 'd':
+            a = 1
+            d = -1
+            multiplier = -1
+            motor.main(multiplier, a ,d)
     except AttributeError:
-        print('special key {0} pressed'.format(key))
+        print('{0} pressed'.format(key))
 
 def on_release(key):
     # print('{0} released'.format(key))
