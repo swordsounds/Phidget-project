@@ -9,7 +9,7 @@ import traceback
 import time
 
 #Declare any event handlers here. These will be called every time the associated event occurs.
-
+x = 0
 def onRCServo0_Attach(self):
 	print("Attach!")
 
@@ -21,21 +21,21 @@ def onRCServo0_Error(self, code, description):
 	print("Description: " + str(description))
 	print("----------")
 def thingIsOn(x, rcServo0):
-	x += 5
+	x += 45
 	rcServo0.setTargetPosition(x)
 	print(x)
 	rcServo0.setEngaged(True)
-	
-	# time.sleep(1)
+	return x
+
 def thingIsOn2(x, rcServo1):
-	x += 5
+	x += 45
 	rcServo1.setTargetPosition(x)
 	print(x)
 	rcServo1.setEngaged(True)
-		
+	return x
 
 def onRCServo0():
-	x = 0
+	
 	try:
 		#Create your Phidget channels
 		rcServo0 = RCServo()
@@ -68,8 +68,8 @@ def onRCServo0():
 		rcServo1.openWaitForAttachment(5000)
 		
 		thingIsOn2(x, rcServo1)
-		rcServo0.setTargetPosition(0)
-		rcServo1.setTargetPosition(0)
+		rcServo0.setTargetPosition(x)
+		rcServo1.setTargetPosition(x)
 		time.sleep(1)
 		#Close your Phidgets once the program is done.
 		rcServo0.close()
