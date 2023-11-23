@@ -28,38 +28,37 @@ def on_press(key):
             d = -1
             multiplier = -1
             motor.main(multiplier, a ,d)
+        else:
+            camera_controls()
     except AttributeError:
         print('{0} pressed'.format(key))
+
+
+def camera_controls(key):
+    if key.char == "Key.right":
+        servo.main()
+    elif key.char == "Key.left":
+        servo.main()
+
 
 def on_release(key):
     # print('{0} released'.format(key))
     motor.close()
     if key == keyboard.Key.esc:
-        # Stop listener
         return False
     
-def on_move(x, y):
-    print('Pointer:{0}'.format((x, y)))
 
-# Collect events until released
 with keyboard.Listener(
         on_press=on_press,
         on_release=on_release) as listenerKeyboard:
     listenerKeyboard.join()
 
-with mouse.Listener(
-        on_move=on_move) as listenerMouse:
-    listenerMouse.join()
 
-# ...or, in a non-blocking fashion:
 listenerKeyboard = keyboard.Listener(
     on_press=on_press,
     on_release=on_release)
 
-listenerMouse = mouse.Listener(
-    on_move=on_move)
 
-listenerMouse.start()
 listenerKeyboard.start()
 
 
