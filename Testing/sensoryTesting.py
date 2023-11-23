@@ -1,13 +1,16 @@
 from pynput import keyboard
 from pynput import mouse
 from pynput.mouse import Controller 
-import testingPlace as servo 
+import rcServo as servo 
 import motor as motor
 
 mouseSetPoint = Controller()
 mouseSetPoint.position = (768, 448)
 
+angle = []
+
 def on_press(key):
+    print(sum(angle))
     try:
         # print('{0}'.format(key.char))
         if key.char == 'w':
@@ -29,16 +32,22 @@ def on_press(key):
             multiplier = -1
             motor.main(multiplier, a ,d)
         else:
-            camera_controls()
+            camera_controller(key, angle)
     except AttributeError:
-        print('{0} pressed'.format(key))
+        print('{0}'.format(key))
 
+def camera_controller(key, angle):
+    if key.char == 'q':
+        angle.append(10)
+        # servo.main(sum(angle))
+    elif key.char == 'e':
+        if sum(angle) < 0:
+            angle = 0
+            # servo.main(sum(angle))
+        angle.append(-10)
+        # servo.main(sum(angle))
+ 
 
-def camera_controls(key):
-    if key.char == "Key.right":
-        servo.main()
-    elif key.char == "Key.left":
-        servo.main()
 
 
 def on_release(key):

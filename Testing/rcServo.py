@@ -29,15 +29,16 @@ def main(angle):
 		rcServo0.setChannel(0)
 		rcServo1.setChannel(1)
 
-		rcServo0.openWaitForAttachment(5000)
-		rcServo1.openWaitForAttachment(5000)
+		rcServo0.openWaitForAttachment(900)
+		rcServo1.openWaitForAttachment(900)
 
 		rcServo0.setTargetPosition(angle)
 		rcServo1.setTargetPosition(angle)
-		time.sleep(1)
 
+		rcServo0.setEngaged(True)
+		rcServo1.setEngaged(True)
 
-
+		time.sleep(0.1)
 	except PhidgetException as ex:
 		traceback.print_exc()
 		print("")
@@ -46,6 +47,6 @@ def main(angle):
 def close():
 	rcServo0.close()
 	rcServo1.close()
-
 if __name__ == "__main__":
-	main()
+	angle = 0
+	main(angle)
