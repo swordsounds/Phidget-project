@@ -1,8 +1,11 @@
 from pynput import keyboard
 from pynput import mouse
+from pynput.mouse import Controller 
 import testingPlace as servo 
 import motor as motor
 
+mouseSetPoint = Controller()
+mouseSetPoint.position = (768, 448)
 
 def on_press(key):
     try:
@@ -34,47 +37,29 @@ def on_release(key):
     if key == keyboard.Key.esc:
         # Stop listener
         return False
+    
+def on_move(x, y):
+    print('Pointer:{0}'.format((x, y)))
 
 # Collect events until released
 with keyboard.Listener(
         on_press=on_press,
-        on_release=on_release) as listener:
-    listener.join()
+        on_release=on_release) as listenerKeyboard:
+    listenerKeyboard.join()
+
+with mouse.Listener(
+        on_move=on_move) as listenerMouse:
+    listenerMouse.join()
 
 # ...or, in a non-blocking fashion:
-listener = keyboard.Listener(
+listenerKeyboard = keyboard.Listener(
     on_press=on_press,
     on_release=on_release)
-listener.start()
+
+listenerMouse = mouse.Listener(
+    on_move=on_move)
+
+listenerMouse.start()
+listenerKeyboard.start()
 
 
-def on_move(x, y):
-    print('Pointer moved to {0}'.format(
-        (x, y)))
-
-def on_click(x, y, button, pressed):
-    print('{0} at {1}'.format(
-        'Pressed' if pressed else 'Released',
-        (x, y)))
-    if not pressed:
-        # Stop listener
-        return False
-
-def on_scroll(x, y, dx, dy):
-    print('Scrolled {0} at {1}'.format(
-        'down' if dy < 0 else 'up',
-        (x, y)))
-
-# Collect events until released
-with mouse.Listener(
-        on_move=on_move,
-        on_click=on_click,
-        on_scroll=on_scroll) as listener:
-    listener.join()
-
-# ...or, in a non-blocking fashion:
-listener = mouse.Listener(
-    on_move=on_move,
-    on_click=on_click,
-    on_scroll=on_scroll)
-listener.start()
