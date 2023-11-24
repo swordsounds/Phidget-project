@@ -35,8 +35,14 @@ def main(angle):
 		rcServo0.setTargetPosition(angle)
 		rcServo1.setTargetPosition(angle)
 
+		rcServo0.setAcceleration(208.334)
+		rcServo1.setAcceleration(208.334)
+
 		rcServo0.setEngaged(True)
 		rcServo1.setEngaged(True)
+
+		print(rcServo0.getPosition())
+		print(rcServo1.getPosition())
 
 		time.sleep(0.1)
 	except PhidgetException as ex:
@@ -47,6 +53,7 @@ def main(angle):
 def close():
 	rcServo0.close()
 	rcServo1.close()
+
 if __name__ == "__main__":
 	angle = 0
 	main(angle)

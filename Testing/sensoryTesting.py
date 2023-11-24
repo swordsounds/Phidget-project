@@ -37,15 +37,16 @@ def on_press(key):
         print('{0}'.format(key))
 
 def camera_controller(key, angle):
-    if key.char == 'q':
-        angle.append(10)
-        # servo.main(sum(angle))
-    elif key.char == 'e':
-        if sum(angle) < 0:
-            angle = 0
+    if servo.getPosition() == 0:
+        if key.char == 'q':
+            angle.append(10)
             # servo.main(sum(angle))
-        angle.append(-10)
-        # servo.main(sum(angle))
+        elif key.char == 'e':
+            if sum(angle) < 0:
+                angle = 0
+                # servo.main(sum(angle))
+            angle.append(-10)
+            # servo.main(sum(angle))
  
 
 
