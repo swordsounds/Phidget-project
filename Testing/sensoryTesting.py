@@ -7,50 +7,34 @@ import motor as motor
 mouseSetPoint = Controller()
 mouseSetPoint.position = (768, 448)
 
-angle = []
+RCServo0_angle = []
+RCServo1_angle = []
 
 def on_press(key):
-    print(sum(angle))
     try:
         # print('{0}'.format(key.char))
         if key.char == 'w':
-            a = d = 1
-            multiplier = 1
-            motor.main(multiplier, a, d)
+            motor.main(1, 1, 1)
         elif key.char == 's':
-            a = d = 1
-            multiplier = -1
-            motor.main(multiplier, a ,d)
+            motor.main(-1, 1 ,1)
         elif key.char == 'a':
-            a = -1
-            d = 1
-            multiplier = -1
-            motor.main(multiplier, a ,d)
+            motor.main(-1, -1 ,1)
         elif key.char == 'd':
-            a = 1
-            d = -1
-            multiplier = -1
-            motor.main(multiplier, a ,d)
+            motor.main(-1, 1 ,-1)
         else:
-            camera_controller(key, angle)
+            camera_controller(key, RCServo0_angle, RCServo1_angle)
     except AttributeError:
         # print('{0}'.format(key))
         pass
 
-def camera_controller(key, angle):
-    if servo.getPosition() == 0.0:
+def camera_controller(key, RCServo0_angle, RCServo1_angle):
         if key.char == 'q':
-            print("Ran")
-            angle.append(10)
-            servo.main(sum(angle))
-    else:
+            RCServo0_angle.append(10)
+            servo.onRCServo0(sum(RCServo0_angle))
         if key.char == 'e':
-                angle = 0
-                angle.append(-10)
-                servo.main(sum(angle))
+                RCServo1_angle.append(10)
+                servo.onRCServo1(sum(RCServo1_angle))
  
-
-
 
 def on_release(key):
     # print('{0} released'.format(key))

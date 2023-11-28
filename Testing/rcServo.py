@@ -17,6 +17,29 @@ def onRCServo0_Error(self, code, description):
 	print("Description: " + str(description))
 	print("----------")
 
+def onRCServo0(angle):
+	rcServo0.setDeviceSerialNumber(302849)
+	rcServo0.setOnErrorHandler(onRCServo0_Error)
+	rcServo0.setChannel(0)
+	rcServo0.openWaitForAttachment(900)
+	rcServo0.setTargetPosition(angle)
+	rcServo0.setAcceleration(208.334)
+	rcServo0.setEngaged(True)
+	print(rcServo0.getPosition())
+	time.sleep(0.1)
+	
+
+def onRCServo1(angle):
+	rcServo1.setDeviceSerialNumber(302849)
+	rcServo1.setOnErrorHandler(onRCServo0_Error)
+	rcServo1.setChannel(0)
+	rcServo1.openWaitForAttachment(900)
+	rcServo1.setTargetPosition(angle)
+	rcServo1.setAcceleration(208.334)
+	rcServo1.setEngaged(True)
+	print(rcServo1.getPosition())
+	time.sleep(0.1)
+	
 
 def main(angle):
 	try:
