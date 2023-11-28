@@ -31,12 +31,10 @@ def camera_controller(key, RCServo0_angle, RCServo1_angle):
         if key.char == 'q':
             if sum(RCServo0_angle) < 180:
                 RCServo0_angle.append(10)
-                print(sum(RCServo0_angle))
                 servo.onRCServo0(sum(RCServo0_angle))
         if key.char == 'e':
             if sum(RCServo1_angle) < 180:
                 RCServo1_angle.append(10)
-                print(sum(RCServo1_angle))
                 servo.onRCServo1(sum(RCServo1_angle))
  
 
