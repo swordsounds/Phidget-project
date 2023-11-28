@@ -34,19 +34,20 @@ def on_press(key):
         else:
             camera_controller(key, angle)
     except AttributeError:
-        print('{0}'.format(key))
+        # print('{0}'.format(key))
+        pass
 
 def camera_controller(key, angle):
-    if servo.getPosition() == 0:
+    if servo.getPosition() == 0.0:
         if key.char == 'q':
+            print("Ran")
             angle.append(10)
-            # servo.main(sum(angle))
-        elif key.char == 'e':
-            if sum(angle) < 0:
+            servo.main(sum(angle))
+    else:
+        if key.char == 'e':
                 angle = 0
-                # servo.main(sum(angle))
-            angle.append(-10)
-            # servo.main(sum(angle))
+                angle.append(-10)
+                servo.main(sum(angle))
  
 
 
