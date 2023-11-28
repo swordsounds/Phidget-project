@@ -29,8 +29,10 @@ def on_press(key):
 
 def camera_controller(key, RCServo0_angle, RCServo1_angle):
         if key.char == 'q':
-            RCServo0_angle.append(10)
-            servo.onRCServo0(sum(RCServo0_angle))
+            if servo.rcServo0.getPostition() < 180:
+                RCServo0_angle.append(10)
+                print(sum(RCServo0_angle))
+            # servo.onRCServo0(sum(RCServo0_angle))
         if key.char == 'e':
                 RCServo1_angle.append(10)
                 servo.onRCServo1(sum(RCServo1_angle))

@@ -3,8 +3,6 @@ from Phidget22.Phidget import *
 from Phidget22.Devices.Log import *
 from Phidget22.LogLevel import *
 from Phidget22.Devices.RCServo import *
-
-
 import traceback
 import time
 
@@ -18,65 +16,42 @@ def onRCServo0_Error(self, code, description):
 	print("----------")
 
 def onRCServo0(angle):
-	rcServo0.setDeviceSerialNumber(302849)
-	rcServo0.setOnErrorHandler(onRCServo0_Error)
-	rcServo0.setChannel(0)
-	rcServo0.openWaitForAttachment(900)
-	rcServo0.setTargetPosition(angle)
-	rcServo0.setAcceleration(208.334)
-	rcServo0.setEngaged(True)
-	print(rcServo0.getPosition())
-	time.sleep(0.1)
-	
-
-def onRCServo1(angle):
-	rcServo1.setDeviceSerialNumber(302849)
-	rcServo1.setOnErrorHandler(onRCServo0_Error)
-	rcServo1.setChannel(0)
-	rcServo1.openWaitForAttachment(900)
-	rcServo1.setTargetPosition(angle)
-	rcServo1.setAcceleration(208.334)
-	rcServo1.setEngaged(True)
-	print(rcServo1.getPosition())
-	time.sleep(0.1)
-	
-
-def main(angle):
 	try:
 		rcServo0.setDeviceSerialNumber(302849)
-		rcServo1.setDeviceSerialNumber(302849)
-		
 		rcServo0.setOnErrorHandler(onRCServo0_Error)
-		rcServo1.setOnErrorHandler(onRCServo0_Error)
-
 		rcServo0.setChannel(0)
-		rcServo1.setChannel(1)
-
 		rcServo0.openWaitForAttachment(900)
-		rcServo1.openWaitForAttachment(900)
-
 		rcServo0.setTargetPosition(angle)
-		rcServo1.setTargetPosition(angle)
-
 		rcServo0.setAcceleration(208.334)
-		rcServo1.setAcceleration(208.334)
-
 		rcServo0.setEngaged(True)
+		
+	except PhidgetException as ex:
+		traceback.print_exc()
+		print("")
+		print("PhidgetException " + str(ex.code) + " (" + ex.description + "): " + ex.details) 	
+
+def onRCServo1(angle):
+	try:
+		rcServo1.setDeviceSerialNumber(302849)
+		rcServo1.setOnErrorHandler(onRCServo0_Error)
+		rcServo1.setChannel(0)
+		rcServo1.openWaitForAttachment(900)
+		rcServo1.setTargetPosition(angle)
+		rcServo1.setAcceleration(208.334)
 		rcServo1.setEngaged(True)
-
-		print(rcServo0.getPosition())
-		print(rcServo1.getPosition())
-
-		time.sleep(0.1)
+		
+		
 	except PhidgetException as ex:
 		traceback.print_exc()
 		print("")
 		print("PhidgetException " + str(ex.code) + " (" + ex.description + "): " + ex.details)
+
 
 def close():
 	rcServo0.close()
 	rcServo1.close()
 
 if __name__ == "__main__":
-	angle = 0
-	main(angle)
+	onRCServo1()
+	onRCServo0()
+	
