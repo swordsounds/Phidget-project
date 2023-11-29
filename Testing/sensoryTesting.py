@@ -6,8 +6,8 @@ import motor as motor
 import cameraOperation as camera
 import threading
 
-mouseSetPoint = Controller()
-mouseSetPoint.position = (768, 448)
+# mouseSetPoint = Controller()
+# mouseSetPoint.position = (768, 448)
 
 RCServo0_angle = []
 RCServo1_angle = []
@@ -31,16 +31,16 @@ def on_press(key):
         pass
 
 def camera_controller(key, RCServo0_angle, RCServo1_angle):
-        if sum(RCServo0_angle) + sum(RCServo1_angle) < 359:
+        print(sum(RCServo0_angle))
+        if sum(RCServo0_angle) <= 170 and sum(RCServo0_angle) >= 0: 
             if key.char == 'u':
                 RCServo0_angle.append(10)
                 servo.onRCServo0(sum(RCServo0_angle))
             elif key.char == 'j':
                 RCServo0_angle.append(-10)
                 servo.onRCServo0(sum(RCServo0_angle))
-
-
-            elif key.char == 'h':
+        elif sum(RCServo1_angle) < 170:
+            if key.char == 'h':
                 RCServo1_angle.append(-10)
                 servo.onRCServo1(sum(RCServo1_angle))
             elif key.char == 'k':

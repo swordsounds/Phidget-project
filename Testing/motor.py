@@ -7,9 +7,10 @@ dcMotor1 = DCMotor()
 dcMotor0.setChannel(0)
 dcMotor1.setChannel(1)
 
+
 def main(multiplier, a, d):
-	dcMotor0.openWaitForAttachment(900)
-	dcMotor1.openWaitForAttachment(900)
+	dcMotor0.openWaitForAttachment(1000)
+	dcMotor1.openWaitForAttachment(1000)
 
 	dcMotor0.setAcceleration(19.4)
 	dcMotor1.setAcceleration(19.4)

@@ -10,6 +10,14 @@ import time
 rcServo0 = RCServo()
 rcServo1 = RCServo()
 
+rcServo0.setDeviceSerialNumber(302849)
+rcServo0.setChannel(0)
+rcServo0.openWaitForAttachment(1000)
+
+rcServo1.setDeviceSerialNumber(302849)
+rcServo1.setChannel(1)
+rcServo1.openWaitForAttachment(1000)
+
 def onRCServo0_Error(self, code, description):
 	print("Code: " + ErrorEventCode.getName(code))
 	print("Description: " + str(description))
@@ -17,10 +25,7 @@ def onRCServo0_Error(self, code, description):
 
 def onRCServo0(angle):
 	try:
-		rcServo0.setDeviceSerialNumber(302849)
 		rcServo0.setOnErrorHandler(onRCServo0_Error)
-		rcServo0.setChannel(0)
-		rcServo0.openWaitForAttachment(900)
 		rcServo0.setTargetPosition(angle)
 		rcServo0.setAcceleration(208.334)
 		rcServo0.setEngaged(True)
@@ -32,10 +37,7 @@ def onRCServo0(angle):
 
 def onRCServo1(angle):
 	try:
-		rcServo1.setDeviceSerialNumber(302849)
 		rcServo1.setOnErrorHandler(onRCServo0_Error)
-		rcServo1.setChannel(1)
-		rcServo1.openWaitForAttachment(900)
 		rcServo1.setTargetPosition(angle)
 		rcServo1.setAcceleration(208.334)
 		rcServo1.setEngaged(True)
