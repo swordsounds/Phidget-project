@@ -1,6 +1,5 @@
 import cv2 as cv
 import numpy as np
-
 cap = cv.VideoCapture(0)
 while(1):
     # Take each frame
@@ -15,10 +14,9 @@ while(1):
     # Bitwise-AND mask and original image
     res = cv.bitwise_and(frame,frame, mask= mask)
     cv.imshow('frame',frame)
-   
+    cv.imshow('mask',mask)
+    cv.imshow('res',res)
     k = cv.waitKey(5) & 0xFF
     if k == 27:
         break
 cv.destroyAllWindows()
-
-
