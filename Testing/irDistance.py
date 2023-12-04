@@ -8,13 +8,20 @@ def onSensorChange(self, sensorValue, sensorUnit):
 	print("----------")
 
 voltageRatioInput0 = VoltageRatioInput()
+voltageRatioInput1 = VoltageRatioInput()
 
 def main():
 	voltageRatioInput0.setOnSensorChangeHandler(onSensorChange)
+	voltageRatioInput1.setOnSensorChangeHandler(onSensorChange)
 
+	voltageRatioInput0.setChannel(0)
+	voltageRatioInput1.setChannel(1)
+	
 	voltageRatioInput0.openWaitForAttachment(5000)
+	voltageRatioInput1.openWaitForAttachment(5000)
 
 	voltageRatioInput0.setSensorType(VoltageRatioSensorType.SENSOR_TYPE_1101_SHARP_2Y0A21)
+	voltageRatioInput1.setSensorType(VoltageRatioSensorType.SENSOR_TYPE_1101_SHARP_2Y0A21)
 
 
 def close():
