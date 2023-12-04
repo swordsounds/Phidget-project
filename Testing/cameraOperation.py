@@ -3,7 +3,8 @@ import numpy as np
 
 
 def main():
-    cap = cv.VideoCapture(0)
+    print("Initializing Camera Start")
+    cap = cv.VideoCapture(0, cv.CAP_DSHOW)
     while(1):
         try:
             _, frame = cap.read()

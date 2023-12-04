@@ -4,6 +4,7 @@ from pynput.mouse import Controller
 import rcServo as servo 
 import motor as motor
 import cameraOperation as camera
+import irDistance as distance_sensor
 import threading
 
 # mouseSetPoint = Controller()
@@ -13,8 +14,8 @@ RCServo0_angle = []
 RCServo1_angle = []
 
 servo.main()
+distance_sensor.main()
 
-    
 def on_press(key):
     try:
         if key.char == 'w':
@@ -58,6 +59,7 @@ def cam():
 
 cam_thread = threading.Thread(target=cam)
 cam_thread.start()
+
 
 with keyboard.Listener(
         on_press=on_press,

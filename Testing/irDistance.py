@@ -16,9 +16,9 @@ def main():
 
 	voltageRatioInput0.setSensorType(VoltageRatioSensorType.SENSOR_TYPE_1101_SHARP_2Y0A21)
 
-	time.sleep(60)
 
 def close():
 	voltageRatioInput0.close()
 
-main()
+if __name__ == "__main__":
+	main()
