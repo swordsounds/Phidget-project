@@ -5,6 +5,7 @@ from Phidget22.LogLevel import *
 from Phidget22.Devices.RCServo import *
 import traceback
 import time
+import logging as lg
 
 
 rcServo0 = RCServo()

@@ -6,12 +6,15 @@ import motor as motor
 import cameraOperation as camera
 import irDistance as distance_sensor
 import threading
+import logging as lg
+from Phidget22.PhidgetException import *
 
 # mouseSetPoint = Controller()
 # mouseSetPoint.position = (768, 448)
+lg.basicConfig(format='%(levelname)s: %(message)s', level=lg.DEBUG)
 
-RCServo0_angle = []
-RCServo1_angle = []
+RCServo0_angle = 0
+RCServo1_angle = 0
 
 servo.main()
 distance_sensor.main()
@@ -27,26 +30,44 @@ def on_press(key):
         elif key.char == 'd':
             motor.main(-1, 1 ,-1)
         else:
-            camera_controller(key, RCServo0_angle, RCServo1_angle)
+            camera_controller(key)
     except AttributeError:
         pass
 
-def camera_controller(key, RCServo0_angle, RCServo1_angle):
-        print(sum(RCServo0_angle))
-        if sum(RCServo0_angle) <= 170 and sum(RCServo0_angle) >= 0: 
-            if key.char == 'u':
-                RCServo0_angle.append(10)
-                servo.onRCServo0(sum(RCServo0_angle))
-            elif key.char == 'j':
-                RCServo0_angle.append(-10)
-                servo.onRCServo0(sum(RCServo0_angle))
-        elif sum(RCServo1_angle) < 170:
-            if key.char == 'h':
-                RCServo1_angle.append(-10)
-                servo.onRCServo1(sum(RCServo1_angle))
-            elif key.char == 'k':
-                RCServo1_angle.append(10)
-                servo.onRCServo1(sum(RCServo1_angle))
+def camera_controller(key):
+        global RCServo0_angle
+        global RCServo1_angle
+
+        if key.char == 'u':
+            if RCServo0_angle == 180:
+                lg.debug("== 180")
+            else:    
+                RCServo0_angle += 45
+                servo.onRCServo0(RCServo0_angle) 
+        elif key.char == 'j':
+            if RCServo0_angle == 0:
+                lg.debug("== 0")
+                pass
+            else:
+                RCServo0_angle -= 45
+                servo.onRCServo0(RCServo0_angle)
+        
+        elif key.char == 'k':
+            if RCServo1_angle == 180:
+                lg.debug("== 180")
+            else:    
+                RCServo1_angle += 45
+                servo.onRCServo1(RCServo1_angle) 
+        elif key.char == 'h':
+            if RCServo1_angle == 0:
+                lg.debug("== 0")
+                pass
+            else:
+                RCServo1_angle -= 45
+                servo.onRCServo1(RCServo1_angle)
+
+        lg.info(RCServo0_angle)
+        lg.info(RCServo1_angle)
 
 
 def on_release(key):

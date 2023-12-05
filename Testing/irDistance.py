@@ -1,5 +1,6 @@
 from Phidget22.Phidget import *
 from Phidget22.Devices.VoltageRatioInput import *
+import logging as lg
 import time
 
 
@@ -8,12 +9,10 @@ voltageRatioInput1 = VoltageRatioInput()
 
 
 def onSensorChange(self, sensorValue, sensorUnit):
-	print("SensorValue [" + str(self.getChannel()) + "]: " + str(sensorValue))
-	print("SensorUnit [" + str(self.getChannel()) + "]: " + str(sensorUnit.symbol))
-	print("----------")
+	# print(f"SensorValue [{str(self.getChannel())}]: {str(sensorValue)} {str(sensorUnit.symbol)}\n")
+	return
 
 def main():
-	
 
 	voltageRatioInput0.setChannel(0)
 	voltageRatioInput1.setChannel(1)
@@ -31,4 +30,5 @@ def close():
 	voltageRatioInput0.close()
 	voltageRatioInput1.close()
 
-main()
+if __name__ == '__main_':
+	main()

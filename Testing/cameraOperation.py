@@ -1,9 +1,9 @@
 import cv2 as cv
 import numpy as np
-
+import logging as lg
 
 def main():
-    print("Initializing Camera Start")
+    lg.info("Initializing Camera Start")
     cap = cv.VideoCapture(0, cv.CAP_DSHOW)
     while(1):
         try:
