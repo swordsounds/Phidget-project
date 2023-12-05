@@ -40,13 +40,12 @@ def camera_controller(key):
 
         if key.char == 'u':
             if RCServo0_angle == 180:
-                lg.debug("== 180")
+                pass
             else:    
                 RCServo0_angle += 45
                 servo.onRCServo0(RCServo0_angle) 
         elif key.char == 'j':
             if RCServo0_angle == 0:
-                lg.debug("== 0")
                 pass
             else:
                 RCServo0_angle -= 45
@@ -54,20 +53,16 @@ def camera_controller(key):
         
         elif key.char == 'k':
             if RCServo1_angle == 180:
-                lg.debug("== 180")
+                pass
             else:    
                 RCServo1_angle += 45
                 servo.onRCServo1(RCServo1_angle) 
         elif key.char == 'h':
             if RCServo1_angle == 0:
-                lg.debug("== 0")
                 pass
             else:
                 RCServo1_angle -= 45
                 servo.onRCServo1(RCServo1_angle)
-
-        lg.info(RCServo0_angle)
-        lg.info(RCServo1_angle)
 
 
 def on_release(key):
