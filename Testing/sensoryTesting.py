@@ -42,26 +42,26 @@ def camera_controller(key):
             if RCServo0_angle == 180:
                 pass
             else:    
-                RCServo0_angle += 45
+                RCServo0_angle += 10
                 servo.onRCServo0(RCServo0_angle) 
         elif key.char == 'j':
             if RCServo0_angle == 0:
                 pass
             else:
-                RCServo0_angle -= 45
+                RCServo0_angle -= 10
                 servo.onRCServo0(RCServo0_angle)
         
         elif key.char == 'k':
             if RCServo1_angle == 180:
                 pass
             else:    
-                RCServo1_angle += 45
+                RCServo1_angle += 10
                 servo.onRCServo1(RCServo1_angle) 
         elif key.char == 'h':
             if RCServo1_angle == 0:
                 pass
             else:
-                RCServo1_angle -= 45
+                RCServo1_angle -= 10
                 servo.onRCServo1(RCServo1_angle)
 
 
