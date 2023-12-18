@@ -7,8 +7,11 @@ def main():
     cap = cv.VideoCapture(0, cv.CAP_DSHOW)
     cv.namedWindow("Info", cv.WINDOW_NORMAL)
     cv.resizeWindow("Info", 540, 540)
-   
-   
+
+    text = "1"
+
+
+    cv.putText("")
     while(1):
         try:
             _, frame = cap.read()
