@@ -3,7 +3,7 @@ from Phidget22.Devices.VoltageRatioInput import *
 import time
 
 def onSensorChange(self, sensorValue, sensorUnit):
-	print("SensorValue: " + str(sensorValue))
+	print("SensorValue: " + str(round(sensorValue, 2)))
 	print("SensorUnit: " + str(sensorUnit.symbol))
 	print("----------")
 
@@ -20,7 +20,7 @@ def main():
 
 	voltageRatioInput2.setSensorType(VoltageRatioSensorType.SENSOR_TYPE_1112)
 
-	time.sleep(50)
+	time.sleep(60)
 
 	
 def close():
